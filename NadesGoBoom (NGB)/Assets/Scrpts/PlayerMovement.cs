@@ -1,4 +1,4 @@
-using JetBrains.Rider.Unity.Editor;
+ using JetBrains.Rider.Unity.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-        print(readyToJump);
         MyInput();
         SpeedControl();
 
