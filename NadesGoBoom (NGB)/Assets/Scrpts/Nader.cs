@@ -18,7 +18,8 @@ public class Nader : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject nadeShot = Instantiate(Nade, NadeSpawner);
-            //nadeShot.transform.parent = null;
+            nadeShot.transform.parent = null;
+            
             //The cashed shot is replaceed as soon as the player clickes again with the newest spawned shot
             Rigidbody currentlyShot = nadeShot.GetComponent<Rigidbody>();
             Vector3 finalDirection = Camera.main.transform.forward;
