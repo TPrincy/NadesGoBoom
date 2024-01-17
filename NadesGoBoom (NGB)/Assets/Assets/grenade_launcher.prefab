@@ -817,6 +817,37 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00035481804, y: 0.0008058716, z: 0.0018456243}
     m_Extent: {x: 0.0002181291, y: 0.00018982968, z: 0.00015660265}
   m_DirtyAABB: 0
+--- !u!1 &4369407709674923266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731077023943306775}
+  m_Layer: 0
+  m_Name: Nade Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1731077023943306775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4369407709674923266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.15200001, y: -0.13733333, z: -0.51066536}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6795192770866125139}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4576580077946607571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,37 +1556,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000037561316, y: 0.0005849838, z: 0.0012186139}
     m_Extent: {x: 0.00025367868, y: 0.00022201093, z: 0.00047374822}
   m_DirtyAABB: 0
---- !u!1 &6590003841153350800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8069238940267100117}
-  m_Layer: 0
-  m_Name: Nade Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8069238940267100117
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6590003841153350800}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.032100003, z: 0.25300118}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6795192770866125139}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6676608224923176505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,7 +1776,7 @@ Transform:
   m_Children:
   - {fileID: 1584457430593222376}
   - {fileID: 6628204750592526032}
-  - {fileID: 8069238940267100117}
+  - {fileID: 1731077023943306775}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1812,10 +1812,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56154afc051c1d549838621fd85cfacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NadeSpawner: {fileID: 0}
+  NadeSpawner: {fileID: 6795192770866125139}
   Nade: {fileID: 0}
-  nadePower: 50
-  yPower: 10
+  nadePower: 1
+  yPower: 0.1
 --- !u!1 &7877540533279324545
 GameObject:
   m_ObjectHideFlags: 0

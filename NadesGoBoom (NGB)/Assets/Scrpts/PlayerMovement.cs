@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
-## readyToJump = false;           
+            readyToJump = false;          
 
             Jump();
 
