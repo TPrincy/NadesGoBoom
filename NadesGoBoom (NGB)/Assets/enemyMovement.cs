@@ -8,15 +8,28 @@ public class enemyMovement : MonoBehaviour
 {
 
     public NavMeshAgent agent;
+    
+    [Header("Roaming")]
     public float range;
-    public float shootingDistance;
-
     public Transform centrePoint;
+
+    private float shootingDistance;
+    private float pathUpdateDeadline;    
+
+    [Header("Stats")]
+    public float pathUpdateDelay = 0.2f;
+
+    [Header("Agro")]
     public Transform target;
+    public float agroDistance;
+
+    delegate void MoveFunc();
+    MoveFunc Move;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        Move = DoRMove;
     }
 
     private void Start()
@@ -26,10 +39,38 @@ public class enemyMovement : MonoBehaviour
 
     private void Update()
     {
-        randomMovement();
-        agroRange();
+        
+        
+        if (target != null)
+        {
+            bool inAgroRange = Vector3.Distance(transform.position, target.position) <= agroDistance;
+            bool inShootingRange = Vector3.Distance(transform.position, target.position) <= shootingDistance;
+
+            if (inAgroRange)
+            {
+                LookAtTarget();
+                Move = DontRMove;
+                Move();
+                
+                if (inShootingRange)
+                {
+                    print("shooting");
+                }
+                else
+                {
+                    UpdatePath();
+                }
+            }
+            else if(!inAgroRange && !inShootingRange)
+            {
+                Move = DoRMove;
+                Move();
+            }
+        }
     }
 
+    
+    
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         Vector3 randomPoint = center + Random.insideUnitSphere * range;
@@ -44,7 +85,7 @@ public class enemyMovement : MonoBehaviour
         return false;
     }
 
-    private void randomMovement()
+    private void DoRMove()
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
@@ -57,21 +98,9 @@ public class enemyMovement : MonoBehaviour
         }
     }
 
-    private void agroRange()
+    private void DontRMove()
     {
-        if(target != null)
-        {
-            bool inRange = Vector3.Distance(transform.position, target.position) <= shootingDistance;
 
-            if (inRange)
-            {
-                LookAtTarget();
-            }
-            else
-            {
-                UpdatePath();
-            }
-        }
     }
 
     private void LookAtTarget()
@@ -84,6 +113,10 @@ public class enemyMovement : MonoBehaviour
 
     private void UpdatePath()
     {
-        
+        if ( Time.time >= pathUpdateDeadline )
+        {
+            pathUpdateDeadline = Time.time + pathUpdateDeadline;
+            agent.SetDestination(target.position);
+        }
     }
 }

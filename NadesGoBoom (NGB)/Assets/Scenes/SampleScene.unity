@@ -1076,30 +1076,12 @@ Transform:
   m_Father: {fileID: 245222694}
   m_RootOrder: 131
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &207776332 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7515288904866318711, guid: db831aa0bd5e30245b941cd74b1f21ed,
-    type: 3}
-  m_PrefabInstance: {fileID: 7515288904927257403}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &207776337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
     type: 3}
   m_PrefabInstance: {fileID: 7515288904927257403}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &207776340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207776332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 262053e641b147e448ad065de97987ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &210793098
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,6 +3660,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1631950487}
     m_Modifications:
+    - target: {fileID: 7515288904866318696, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515288904866318697, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1487877216}
     - target: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
         type: 3}
       propertyPath: m_RootOrder
@@ -9002,6 +8994,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1631950487}
     m_Modifications:
+    - target: {fileID: 7515288904866318696, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515288904866318697, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1487877216}
     - target: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
         type: 3}
       propertyPath: m_RootOrder
@@ -11211,6 +11213,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1631950487}
     m_Modifications:
+    - target: {fileID: 7515288904866318696, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515288904866318697, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1487877216}
     - target: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
         type: 3}
       propertyPath: m_RootOrder
@@ -12353,6 +12365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1631950487}
     m_Modifications:
+    - target: {fileID: 7515288904866318697, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1487877216}
     - target: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
         type: 3}
       propertyPath: m_RootOrder
@@ -13666,6 +13683,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1631950487}
     m_Modifications:
+    - target: {fileID: 7515288904866318696, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515288904866318697, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1487877216}
     - target: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
         type: 3}
       propertyPath: m_RootOrder
@@ -16069,6 +16096,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1631950487}
     m_Modifications:
+    - target: {fileID: 7515288904866318696, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515288904866318697, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1487877216}
     - target: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
         type: 3}
       propertyPath: m_RootOrder
@@ -16938,6 +16975,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1631950487}
     m_Modifications:
+    - target: {fileID: 7515288904866318697, guid: db831aa0bd5e30245b941cd74b1f21ed,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1487877216}
     - target: {fileID: 7515288904866318698, guid: db831aa0bd5e30245b941cd74b1f21ed,
         type: 3}
       propertyPath: m_RootOrder
