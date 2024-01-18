@@ -114,6 +114,5 @@ public class enemyMovement : MonoBehaviour
     private void UpdatePath()
     {
         agent.SetDestination(target.position);
-        print("Update Path");
     }
 }

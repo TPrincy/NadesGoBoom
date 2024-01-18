@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyHealth : MonoBehaviour
 {
 
-    [SerializeField] enemyHP;
+    [SerializeField] float enemyHP;
 
     void Start()
     {
@@ -15,9 +15,6 @@ public class enemyHealth : MonoBehaviour
 
     void Update()
     {
-        if(enemyHp => 0)
-        {
-            Destroy;
-        }
+
     }
 }
