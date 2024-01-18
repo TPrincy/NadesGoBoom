@@ -10,16 +10,19 @@ public class Nader : MonoBehaviour
 
     [SerializeField] float nadePower = 50f;
     [SerializeField] float yPower = 10f;
+    [SerializeField] float nadeDMG = 2f;
 
-    
+
+    GameObject nadeShot;
 
     private void Update()
     {
 
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject nadeShot = Instantiate(Nade, NadeSpawner);
+            nadeShot = Instantiate(Nade, NadeSpawner);
             nadeShot.transform.parent = null;
+            SetPosition();
             //currently nade spawns no where near where the spawner is located for some reason
             
             Rigidbody currentlyShot = nadeShot.GetComponent<Rigidbody>();
@@ -30,4 +33,11 @@ public class Nader : MonoBehaviour
         }
 
     }
+
+    void SetPosition()
+    {
+        nadeShot.transform.position = NadeSpawner.transform.position;
+    }
+
+
 }

@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 7515288904866318709}
   - component: {fileID: 7515288904866318696}
   - component: {fileID: 7515288904866318697}
+  - component: {fileID: -8818552768568539507}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -238,3 +239,15 @@ MonoBehaviour:
   pathUpdateDelay: 0.2
   target: {fileID: 0}
   agroDistance: 20
+--- !u!114 &-8818552768568539507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515288904866318711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210be7270afa61744951faaba5787690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
