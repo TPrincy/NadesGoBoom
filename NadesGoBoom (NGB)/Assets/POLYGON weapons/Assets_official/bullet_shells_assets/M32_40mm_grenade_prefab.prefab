@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3863634146400483919}
+  - component: {fileID: 6360541262606929426}
+  - component: {fileID: 7002988115490084456}
   m_Layer: 0
   m_Name: M32_40mm_grenade_prefab
   m_TagString: Untagged
@@ -25,12 +27,39 @@ Transform:
   m_GameObject: {fileID: 318900897771986961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4898621815049731845}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6360541262606929426
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318900897771986961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.105645165
+  m_Height: 0.21732564
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.008846712, z: 0.009102977}
+--- !u!114 &7002988115490084456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318900897771986961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6305bdd71e325478bb35085b051e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &468887114685944863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,10 +67,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3863634146400483919}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: bcec7dab45b0f1c4dbd7486299a483a3,
+    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
         type: 3}
-      propertyPath: m_Name
-      value: M32_40mm_grenade
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 99.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 99.99997
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
         type: 3}
@@ -60,6 +99,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.7071068
       objectReference: {fileID: 0}
@@ -72,16 +116,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
         type: 3}
@@ -98,21 +132,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 99.99997
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: bcec7dab45b0f1c4dbd7486299a483a3,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 99.99997
-      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: bcec7dab45b0f1c4dbd7486299a483a3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b50e69563dd6f0b4a90ed6133a03145c, type: 2}
+    - target: {fileID: -927199367670048503, guid: bcec7dab45b0f1c4dbd7486299a483a3,
+        type: 3}
+      propertyPath: m_Name
+      value: M32_40mm_grenade
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcec7dab45b0f1c4dbd7486299a483a3, type: 3}
 --- !u!4 &4898621815049731845 stripped

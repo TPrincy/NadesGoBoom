@@ -841,8 +841,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4369407709674923266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15200001, y: -0.13733333, z: -0.51066536}
-  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
+  m_LocalPosition: {x: 0.002, y: 0.0327, z: 0.395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6795192770866125139}
@@ -1757,7 +1757,7 @@ GameObject:
   - component: {fileID: 1961294668792988788}
   m_Layer: 0
   m_Name: grenade_launcher
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1812,10 +1812,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56154afc051c1d549838621fd85cfacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NadeSpawner: {fileID: 6795192770866125139}
-  Nade: {fileID: 0}
-  nadePower: 1
+  NadeSpawner: {fileID: 1731077023943306775}
+  Nade: {fileID: 6912332736964130504, guid: d3cb00b2d0f6e8f4191a7b323db467f7, type: 3}
+  nadePower: 15
   yPower: 0.1
+  nadeDMG: 2
+  currentAmmoCount: 6
+  maxAmmoCount: 6
+  currentAmmoReserve: 36
+  maxAmmoReserveSize: 36
 --- !u!1 &7877540533279324545
 GameObject:
   m_ObjectHideFlags: 0

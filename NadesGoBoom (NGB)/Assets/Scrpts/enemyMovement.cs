@@ -23,6 +23,9 @@ public class enemyMovement : MonoBehaviour
     public Transform target;
     public float agroDistance;
 
+    [Header("Shooting")]
+    public bool inShootingRange;
+    
     delegate void MoveFunc();
     MoveFunc Move;
 
@@ -44,7 +47,7 @@ public class enemyMovement : MonoBehaviour
         if (target != null)
         {
             bool inAgroRange = Vector3.Distance(transform.position, target.position) <= agroDistance;
-            bool inShootingRange = Vector3.Distance(transform.position, target.position) <= shootingDistance;
+            inShootingRange = Vector3.Distance(transform.position, target.position) <= shootingDistance;
 
             if (inAgroRange)
             {
