@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class enemyAttacking : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class enemyAttacking : MonoBehaviour
     [SerializeField] float nadePower;
     [SerializeField] float yPower;
     [SerializeField] float nadeDMG;
-    //[SerializeField] int ammoCount = 2;
+    [SerializeField] private float fireRate = 2f;
+    private float fireingCooldown = 0f;
 
     GameObject enemyNadeShot;
 
@@ -27,16 +29,20 @@ public class enemyAttacking : MonoBehaviour
 
         if (EnemyMovement.inShootingRange)
         {
-            print("shooting shooting");
-            enemyNadeShot = Instantiate(EnemyNade, EnemyNadeSpawner);
-            enemyNadeShot.transform.parent = null;
-            SetPosition();
-            //currently nade spawns no where near where the spawner is located for some reason
+            if(fireingCooldown <= 0)
+            {
+                enemyNadeShot = Instantiate(EnemyNade, EnemyNadeSpawner);
+                enemyNadeShot.transform.parent = null;
+                SetPosition();
 
-            Rigidbody currentlyShot = enemyNadeShot.GetComponent<Rigidbody>();
-            Vector3 finalDirection = EnemyNadeSpawner.transform.forward;    
-            finalDirection = finalDirection +  Vector3.up * nadePower;
-            currentlyShot.AddForce(finalDirection * nadePower, ForceMode.Impulse);
+                Rigidbody currentlyShot = enemyNadeShot.GetComponent<Rigidbody>();
+                Vector3 finalDirection = EnemyNadeSpawner.transform.forward;
+                finalDirection = finalDirection + Vector3.up * nadePower;
+                currentlyShot.AddForce(finalDirection * nadePower, ForceMode.Impulse);
+
+                fireingCooldown = 1f/fireRate;
+            }
+            fireingCooldown -= Time.deltaTime;
 
         }
 
@@ -46,4 +52,5 @@ public class enemyAttacking : MonoBehaviour
     {
         enemyNadeShot.transform.position = EnemyNadeSpawner.transform.position;
     }
+
 }

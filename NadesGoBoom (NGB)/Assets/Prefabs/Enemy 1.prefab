@@ -270,10 +270,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyNadeSpawner: {fileID: 6481609538728157528}
-  EnemyNade: {fileID: 0}
-  nadePower: 0
-  yPower: 0
-  nadeDMG: 0
+  EnemyNade: {fileID: 24387554279907653, guid: 1248f99ccba0bff4788263a0a58f781b, type: 3}
+  nadePower: 10
+  yPower: 0.1
+  nadeDMG: 1
+  fireRate: 2
 --- !u!54 &356668750928554073
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -356,6 +357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_grenade_launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635372813282644814, guid: 083cbee9d5c5a5240ae2e52576c59f19,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 6855738773783853357, guid: 083cbee9d5c5a5240ae2e52576c59f19,
         type: 3}
